@@ -10,7 +10,7 @@ body {
   display: block;
   text-align: right;
 }
-.aaa img {
+.header__img {
   width: 100%;
 }
 .aaa .more_inf {
@@ -37,12 +37,12 @@ body {
 .task-row-wrapper {
   display: flex;
 }
-ul {
+.todo__list {
   margin: 0;
   padding: 0px;
 }
-li,
-h3 {
+.todo__item,
+.todo__title {
   list-style: none;
 }
 input,button{
@@ -132,7 +132,7 @@ button.delete img:hover {
 }
 
 /* Completed */
-ul#completed-tasks label {
+.todo__list#completed-tasks .task.label {
   text-decoration: line-through;
   color: #888;
 }
