@@ -4,14 +4,14 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
-#topSectionForAddingElementToList {
+.todo_add {
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-.aaa {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
@@ -20,28 +20,23 @@ body {
 .header__img {
   width: 100%;
 }
-.aaa .more_inf {
+.header__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
 
-  .aaa {
+  .header {
     text-align: center;
   }
 
 }
-.centered-main-page-element {
+.main {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
-.task {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1;
-}
-.task-row-wrapper {
+.todo__new-container {
   display: flex;
 }
 .todo__list {
@@ -53,6 +48,7 @@ body {
   list-style: none;
 }
 .todo__input,
+.todo__checkbox,
 .btn {
   outline: none;
 }
@@ -78,7 +74,10 @@ body {
   margin: 0;
   text-transform: uppercase;
 }
-.todo__input.task {
+.todo__input {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -90,16 +89,16 @@ body {
   font-family: Lato, sans-serif;
   color: #888;
 }
-.todo__input.task:focus {
+.todo__input:focus {
   color: #333;
 }
 
 /* New Task */
-.todo__title_new-task {
+.todo__title_new {
   display: block;
   margin: 0 0 20px;
 }
-.todo__input#new-task {
+.todo__input.todo__input_new {
   width: 318px;
 }
 
@@ -114,21 +113,24 @@ body {
   align-items: center;
 }
 .todo__item > .todo__input,
-.todo__item > .task,
+.todo__item > .todo__label,
+.todo__item > .todo__checkbox,
 .todo__item > .btn {
   vertical-align: middle;
 }
 
-.todo__item > .todo__input_checkbox {
+.todo__checkbox {
   margin: 0 10px;
 }
-.todo__item > .label {
+.todo__label {
+  display: inline-block;
+  flex-grow: 1;
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-.todo__item  > .todo__input.task {
+.todo__item  > .todo__input {
   width: 226px;
 }
 .btn__delete-img {
@@ -141,21 +143,21 @@ body {
 }
 
 /* Completed */
-.todo__list#completed-tasks .task.label {
+.todo__label_done {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.todo__list .todo__item .todo__input.task {
+.todo__item .todo__input {
   display: none;
 }
 
-.todo__list .todo__item.editMode .todo__input.task {
+.todo__item_edit .todo__input {
   display: inline-block;
   width: 224px;
 }
 
-.todo__list .todo__item.editMode .label {
+.todo__item.todo__item_edit .todo__label {
   display: none;
 }
