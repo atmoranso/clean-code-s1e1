@@ -45,10 +45,10 @@ body {
 .todo__title {
   list-style: none;
 }
-input,button{
+.todo__input,.btn {
   outline: none;
 }
-button {
+.btn {
   background: none;
   border: 0px;
   color: #888;
