@@ -45,7 +45,8 @@ body {
 .todo__title {
   list-style: none;
 }
-.todo__input,.btn {
+.todo__input,
+.btn {
   outline: none;
 }
 .btn {
