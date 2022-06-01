@@ -17,6 +17,9 @@
   display: block;
   text-align: right;
 }
+.header__title {
+  display: none;
+}
 .header__img {
   width: 100%;
 }
